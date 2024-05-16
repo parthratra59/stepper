@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
-
+import timeReporter from 'vite-plugin-time-reporter';
 
 // https://vitejs.dev/config/
 
@@ -10,10 +10,12 @@ import react from '@vitejs/plugin-react-swc'
 // CORS is about restricting access, allowing only authorized users.
 // This will be attached to the API.
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(),
+    timeReporter(),
+  ],
   server:{
     proxy:{
-      '/api':'http://localhost:3000',
+      '/api':'https://stepper-3f76.onrender.com/',
     }
   }
 })

@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from "express";
+import express, { Request, Response} from "express";
 import cors from "cors";
 const app = express();
 
@@ -18,7 +18,7 @@ app.use(express.json({
 
 app.use(cors(
   {
-    origin: "http://localhost:5173",
+    origin: ["https://stepper-17611.web.app/","http://localhost:5173"],
     credentials: true,
    
   }
@@ -31,6 +31,6 @@ app.listen(PORT,() => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-app.get("/", (req: Request, res: Response, next: NextFunction) => {
+app.get("/", (req: Request, res: Response) => {
   res.send("Hello World");
 });

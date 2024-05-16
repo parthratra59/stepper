@@ -8,6 +8,8 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// ef
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")

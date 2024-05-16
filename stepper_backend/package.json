@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "npx tsc",
     "start": "node dist/index.js",
     "dev": "npx tsc && nodemon src/index.ts "
   },
@@ -27,6 +27,7 @@
     "@types/express": "^4.17.21",
     "@types/node": "^20.12.11",
     "prisma": "^5.13.0",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   }
 }

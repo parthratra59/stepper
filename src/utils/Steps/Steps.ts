@@ -1,20 +1,21 @@
-// utils/Steps/Steps.ts
+import PersonalDetails from "../../components/Personal_Details/Personal_Details";
+import Payment from "../../components/Payment/Payment";
+import ThankYouComponent from "../../components/Thankyou_Component/Thankyou_Component";
 
-import React from 'react';
+
 const Steps = [
-    {
+  {
       name: "User Details",
-      component: React.lazy(() => import('../../components/Personal_Details/Personal_Details'))
-    },
-    {
+      component: PersonalDetails
+  },
+  {
       name: "Payment",
-      component: React.lazy(() => import('../../components/Payment/Payment'))
-    },
-    {
+      component: ThankYouComponent
+  },
+  {
       name: "ThankYou",
-      component: React.lazy(() => import('../../components/Thankyou_Component/Thankyou_Component'))
-    }
-  ];
-  
-  export default Steps;
-  
+      component: Payment
+  }
+];
+
+export default Steps;

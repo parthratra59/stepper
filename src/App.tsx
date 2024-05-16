@@ -2,10 +2,9 @@ import React, { useContext } from "react";
 import CheckoutStepper from "./utils/CheckoutStepper/CheckoutStepper";
 import Steps from "./utils/Steps/Steps";
 import "./App.css";
-
-const PersonalDetails = React.lazy(() => import("./components/Personal_Details/Personal_Details"));
-const Payment = React.lazy(() => import("./components/Payment/Payment"));
-const ThankYouComponent = React.lazy(() => import("./components/Thankyou_Component/Thankyou_Component"));
+import PersonalDetails from "./components/Personal_Details/Personal_Details";
+import Payment from "./components/Payment/Payment";
+import ThankYouComponent from "./components/Thankyou_Component/Thankyou_Component";
 import { stepContext } from "./context/StepContext";
 import toast from "react-hot-toast";
 import axios, { AxiosError } from "axios";

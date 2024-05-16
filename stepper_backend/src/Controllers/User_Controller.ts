@@ -1,11 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import prisma from "../db/db.config";
-import { Request, Response } from "express";
+import { Request, Response, } from "express";
 import ApiResponse from "../utils/apiResponse";
 import ApiError from "../utils/apiError";
 
 const createUser = async (req: Request, res: Response) => {
   try {
-    let {
+    const {
       fullName,
       email,
       phoneNumber,
@@ -69,7 +70,7 @@ const createUser = async (req: Request, res: Response) => {
     return res
       .status(201)
       .json(ApiResponse(201, user, "User created successfully"));
-  } catch (error: any) {
+  } catch (error:any) {
     throw ApiError(500, error.message);
   }
 };

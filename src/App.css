@@ -1,0 +1,98 @@
+body {
+  font-family: sans-serif;
+}
+
+.stepper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-top: 20px; */
+  padding: 12px 20px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-number {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  z-index: 2;
+}
+
+.step-name {
+  font-size: 14px;
+}
+
+.active .step-number {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.complete .step-number {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  height: 4px;
+  background-color: #ccc;
+}
+
+.progress {
+  height: 100%;
+  background-color: #28a745;
+  transition: 0.2s ease;
+}
+
+.content-container {
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px; /* Adjust padding as needed */
+
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745; /* Green color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 25px;
+}
+
+.button2 {
+  padding: 10px 20px; /* Adjust padding as needed */
+
+  border: none;
+  border-radius: 5px;
+  background-color: red; /* Green color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 15px;
+}
+
+
+
+.button:hover {
+  background-color: #45a049; /* Darker green color on hover */
+}
+
+/* Centering button div */
+.button-div {
+  text-align: center;
+  margin-top: 20px; /* Adjust top margin as needed */
+}

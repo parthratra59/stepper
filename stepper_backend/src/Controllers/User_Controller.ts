@@ -30,7 +30,7 @@ const createUser = async (req: Request, res: Response) => {
           { email: email },
           { phoneNumber: phoneNumber },
           { cardNumber: cardModifynumber },
-         
+        //  dd
         ],
       },
     });

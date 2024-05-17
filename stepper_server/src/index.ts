@@ -17,7 +17,7 @@ app.use(express.json({
 
 app.use(cors(
   {
-    origin: ["https://paymentstepper.netlify.app/","http://localhost:5173"],
+    origin: ["https://paymentstepper.netlify.app/"],
     credentials: true,
    
   }

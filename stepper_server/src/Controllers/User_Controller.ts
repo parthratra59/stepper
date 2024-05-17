@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import prisma from "../db/db.config";
+
+import prisma from "../db/db.config.js"
 import { Request, Response, } from "express";
-import ApiResponse from "../utils/apiResponse";
-import ApiError from "../utils/apiError";
+import ApiResponse from "../utils/apiResponse.js";
+import ApiError from "../utils/apiError.js";
 
 const createUser = async (req: Request, res: Response) => {
   try {

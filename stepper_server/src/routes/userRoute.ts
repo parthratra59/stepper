@@ -2,7 +2,7 @@ import express from "express";
 
 const router = express.Router();
 
-import createUser  from "../Controllers/User_Controller.js";
+import createUser  from "../Controllers/User_Controller";
 
 
 router.post("/createUser",createUser)

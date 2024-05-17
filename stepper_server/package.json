@@ -2,7 +2,7 @@
   "name": "stepper_server",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "type": "module",
+  "type": "commonjs",
   "license": "MIT",
   "scripts": {
     "build": "tsc",

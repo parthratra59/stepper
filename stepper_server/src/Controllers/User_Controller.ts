@@ -1,8 +1,8 @@
 
-import prisma from "../db/db.config.js"
+import prisma from "../db/db.config"
 import { Request, Response, } from "express";
-import ApiResponse from "../utils/apiResponse.js";
-import ApiError from "../utils/apiError.js";
+import ApiResponse from "../utils/apiResponse";
+import ApiError from "../utils/apiError";
 
 const createUser = async (req: Request, res: Response) => {
   try {

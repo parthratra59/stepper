@@ -15,16 +15,18 @@ app.use(express.json({
 
 
 
-app.use(cors(
-  {
-    origin: ["https://paymentstepper.netlify.app/"],
-    credentials: true,
-   
-  }
-))
+const corsOptions = {
+  origin: "https://paymentstepper.netlify.app",
+  credentials: true,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  allowedHeaders: "Content-Type,Authorization"
+};
+
+// Apply CORS only to specific routes
+
 app.use(express.urlencoded({ extended:false}))
 
-app.use("/api/v1/users",userRoute)
+app.use("/api/v1/users", cors(corsOptions), userRoute);
 
 app.listen(PORT,() => {
   console.log(`Server is running on port ${PORT}`);

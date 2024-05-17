@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE "User" (
+CREATE TABLE "Userdata" (
     "id" SERIAL NOT NULL,
     "fullName" TEXT,
     "email" TEXT NOT NULL,
@@ -12,11 +12,11 @@ CREATE TABLE "User" (
     "cvv" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
-    CONSTRAINT "User_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "Userdata_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
+CREATE UNIQUE INDEX "Userdata_email_key" ON "Userdata"("email");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "User_phoneNumber_key" ON "User"("phoneNumber");
+CREATE UNIQUE INDEX "Userdata_phoneNumber_key" ON "Userdata"("phoneNumber");

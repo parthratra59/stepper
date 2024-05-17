@@ -15,7 +15,7 @@ datasource db {
 
 
 
-  model User {
+model Userdata {
   id            Int      @id @default(autoincrement()) 
   fullName      String? 
   email         String   @unique
@@ -28,5 +28,3 @@ datasource db {
   cvv           String 
   createdAt     DateTime @default(now())
 }
-
- 

@@ -19,7 +19,7 @@ const createUser = async (req: Request, res: Response) => {
     } = req.body;
     // in operator is not there in the prisma
 
-    console.log("df df",req.body);
+    
 
     const cardModifynumber = cardNumber.split("-").join("");
 

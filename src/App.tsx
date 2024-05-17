@@ -70,8 +70,8 @@ function App() {
         cvv: stepData.cvv,
       });
     
-      const data = await response.data;
-      console.log(data);
+       await response.data;
+      // console.log(data);
     
       if (response.status === 201) {
         // User created successfully

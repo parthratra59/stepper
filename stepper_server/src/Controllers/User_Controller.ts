@@ -70,6 +70,7 @@ const createUser = async (req: Request, res: Response) => {
     return res
       .status(201)
       .json(ApiResponse(201, user, "User created successfully"));
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error:any) {
     throw ApiError(500, error.message);
   }

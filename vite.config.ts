@@ -13,11 +13,7 @@ export default defineConfig({
   plugins: [react(),
     timeReporter(),
   ],
-  server:{
-    proxy:{
-      '/api':'https://stepper-3f76.onrender.com/',
-    }
-  }
+  
 })
 
 

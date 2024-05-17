@@ -58,7 +58,7 @@ function App() {
     console.log(stepData)
 
     try {
-      const response = await axios.post("/api/v1/users/createUser", {
+      const response = await axios.post("https://stepper-3f76.onrender.com/api/v1/users/createUser", {
         fullName: stepData.fullName,
         email: stepData.email,
         phoneNumber: stepData.phoneNumber,

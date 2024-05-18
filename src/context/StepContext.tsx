@@ -1,5 +1,5 @@
 import { createContext } from "react";
-
+// Define the interface for the step data
 interface stepDataProvider {
   fullName: string;
   email: string;
@@ -11,7 +11,7 @@ interface stepDataProvider {
   expiryDate: string;
   cvv: string;
 }
-
+// Define the interface for the context type
 interface stepContextType {
   stepData: stepDataProvider;
   setStepData: React.Dispatch<React.SetStateAction<stepDataProvider>>;
@@ -32,7 +32,7 @@ interface stepContextType {
   expiryDate: boolean;
   setExpiryDate: React.Dispatch<React.SetStateAction<boolean>>;
 }
-
+// Create the context with default values
 export const stepContext = createContext<stepContextType>({
   stepData: {
     fullName: "",

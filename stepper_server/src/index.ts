@@ -20,6 +20,8 @@ app.use(express.json({
 }));
 
 // Define CORS options to restrict access to a specific origin and allow certain methods and headers
+
+// for locally -> origin: http://localhost:5173
 const corsOptions = {
   origin: "https://paymentstepper.netlify.app",
   credentials: true,

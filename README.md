@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+# STEPPER APPLICATION
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### About the Application
 
-Currently, two official plugins are available:
+This React.js Stepper Application, developed with TypeScript, Tailwind CSS, PostgreSQL, Prisma, Node.js, and Express.js, offers a seamless form-filling experience. Despite React's deprecation of Vite, its speed and features remain popular. The app includes email, phone, card validation, Prisma ORM integration, and CORS implementation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+### Features and Technologies used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Stepper Form: The application features a multi-step form, allowing users to input various types of information in separate sections.
 
-- Configure the top-level `parserOptions` property like this:
+2. Validations: Includes validations for email, phone number, card number, CVV, and expiry date to ensure accurate data entry.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3. Database Integration: Utilizes PostgreSQL database integration via Prisma for Object-Relational Mapping (ORM) to manage and persist data.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+4. Responsive Design: Employs Tailwind CSS to create a responsive and mobile-friendly interface, ensuring optimal user experience across devices.
+
+5. React Hooks: Leverages React hooks such as useState, useContext, and useEffect for efficient state management and side effect handling.
+
+6. CORS Implementation: Implements CORS (Cross-Origin Resource Sharing) for securely handling requests from different origins, enhancing security and compatibility.
+
+
+## 🚀 Live Deployed Link: https://paymentstepper.netlify.app/
+
+## 📽️ Demo Video: https://drive.google.com/file/d/1VEOh7aC-3iXSWnv232NuVlo_gu3QTf-6/view?usp=sharing
+
+

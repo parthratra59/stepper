@@ -19,9 +19,23 @@ This React.js Stepper Application, developed with TypeScript, Tailwind CSS, Post
 
 6. CORS Implementation: Implements CORS (Cross-Origin Resource Sharing) for securely handling requests from different origins, enhancing security and compatibility.
 
+7. Render: Render is utilized for backend deployment, providing a reliable and scalable infrastructure to handle application requests efficiently.
 
-## 🚀 Live Deployed Link: https://paymentstepper.netlify.app/
+8. Netlify: The frontend of the project is deployed on Netlify.
 
-## 📽️ Demo Video: https://drive.google.com/file/d/1VEOh7aC-3iXSWnv232NuVlo_gu3QTf-6/view?usp=sharing
+
+## 🚀 Live Deployed Link:
+https://paymentstepper.netlify.app/
+
+
+## 📽️ Demo Video: 
+https://github.com/parthratra59/stepper/assets/90822015/eed69ea1-2716-4103-a820-90dfc04bc625
+
+
+
+
+
+
+
 
 

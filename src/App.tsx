@@ -22,6 +22,7 @@ function App() {
     expiryDate,
   } = useContext(stepContext);
 
+  // Function to show the appropriate component based on the current step
   const showComponent = (step: number) => {
     switch (step) {
       case 1:
@@ -71,7 +72,7 @@ function App() {
       });
     
        await response.data;
-      // console.log(data);
+     
     
       if (response.status === 201) {
         // User created successfully

@@ -28,6 +28,7 @@ const Personal_Details = () => {
     },
   };
 
+   // Accessing state and functions from the context
   const {
     stepData,
     setStepData,
@@ -36,8 +37,12 @@ const Personal_Details = () => {
     phoneEdited,
     setPhoneEdited,
   } = React.useContext(stepContext);
+
+  
+  // State for email error message
   const [emailError, setEmailError] = useState<string | null>(null);
 
+    // Refs for input fields
   const phoneInputRef = useRef<HTMLInputElement>(null);
   const emailInputRef = useRef<HTMLInputElement>(null);
 

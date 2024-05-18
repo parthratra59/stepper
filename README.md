@@ -59,6 +59,11 @@ npm install
 5. Start the project locally (Run the frontend and backend servers):
 
 ```bash
+# For the frontend
+npm run dev
+
+# For the backend
+cd stepper_server
 npm run dev
 ```
 

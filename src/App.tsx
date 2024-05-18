@@ -56,7 +56,7 @@ function App() {
       return;
     }
 
-    console.log(stepData)
+  // for locally http://localhost:3000/api/v1/users/createUser
 
     try {
       const response = await axios.post("https://stepper-3f76.onrender.com/api/v1/users/createUser", {

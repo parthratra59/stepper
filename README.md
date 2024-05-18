@@ -39,7 +39,7 @@ To run the project locally, follow these steps:
 1. Clone the repository:
 
 ```bash
-https://github.com/ParthRatra/nomad_trakker.git
+https://github.com/parthratra59/stepper.git
 ```
 
 2. Navigate to the project directory:

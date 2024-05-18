@@ -143,7 +143,7 @@ const Personal_Details = () => {
                   />
                 </label>
               </div>
-              <div className="mb-4">
+              <div className="mb-4 relative">
                 <label className="block text-sm font-medium text-gray-700">
                   User Email <span className="text-red-500">*</span>
                   <input
@@ -160,7 +160,7 @@ const Personal_Details = () => {
                   />
                 </label>
                 {emailError && (
-                  <p className="text-red-500 absolute left-12 text-xs ">{emailError}</p>
+                  <p className="text-red-500 absolute text-xs">{emailError}</p>
                 )}
               </div>
               <div className="mb-4">

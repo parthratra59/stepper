@@ -5,6 +5,7 @@ import ApiResponse from "../utils/apiResponse";
 import ApiError from "../utils/apiError";
 
 const createUser = async (req: Request, res: Response) => {
+  // Destructure the user details from the request body
   try {
     const {
       fullName,
@@ -17,13 +18,13 @@ const createUser = async (req: Request, res: Response) => {
       expiryDate,
       cvv,
     } = req.body;
-    // in operator is not there in the prisma
+ 
 
     
-
+ // Remove hyphens from the card number to standardize the format
     const cardModifynumber = cardNumber.split("-").join("");
 
-    // any of this will be there in the field
+  // Check if a user already exists with the given email, phone number, or card number
     const findUser = await prisma.user.findMany({
       where: {
         OR: [
@@ -35,7 +36,7 @@ const createUser = async (req: Request, res: Response) => {
       },
     });
 
-    // findMany method in Prisma returns an array of records based on the specified conditions
+    // If a user already exists with any of the provided details, return a 400 response
 
     if (findUser.length > 0) {
       return res
@@ -50,8 +51,7 @@ const createUser = async (req: Request, res: Response) => {
     }
 
    
-    // or
-    // const cardModifynumber = cardNumber.replace(/-/g, "")
+   // Create a new user with the provided details
 
     const user = await prisma.user.create({
       data: {
@@ -67,11 +67,13 @@ const createUser = async (req: Request, res: Response) => {
       },
     });
 
+     // Return a 201 response with the created user data
     return res
       .status(201)
       .json(ApiResponse(201, user, "User created successfully"));
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error:any) {
+    // In case of an error, throw an ApiError with a 500 status code
     throw ApiError(500, error.message);
   }
 };

@@ -24,12 +24,43 @@ This React.js Stepper Application, developed with TypeScript, Tailwind CSS, Post
 8. Netlify: The frontend of the project is deployed on Netlify.
 
 
-## 🚀 Live Deployed Link:
-https://paymentstepper.netlify.app/
+## 🚀 Live Deployed Link: https://paymentstepper.netlify.app/
 
 
 ## 📽️ Demo Video: 
 https://github.com/parthratra59/stepper/assets/90822015/eed69ea1-2716-4103-a820-90dfc04bc625
+
+
+
+## Getting Started Locally 🚀
+
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+
+```bash
+https://github.com/ParthRatra/nomad_trakker.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd <projectdictonary>
+```
+
+3. Install the required dependencies for both the frontend and backend.:
+
+```bash
+npm install
+```
+
+4. Configure your environment variables, including API keys and database connections.
+
+5. Start the project locally (Run the frontend and backend servers):
+
+```bash
+npm run dev
+```
 
 
 

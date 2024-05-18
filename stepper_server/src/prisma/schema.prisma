@@ -13,6 +13,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// The User model defines the structure of the 'User' table in the database.
+
 model User {
   id            Int      @id @default(autoincrement()) 
   fullName      String? 

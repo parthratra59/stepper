@@ -1,8 +1,8 @@
 import React, { useEffect, useRef} from "react";
 import { stepContext } from "../../context/StepContext";
-
 import toast from "react-hot-toast";
 
+// Define type for styles object
 interface StylesType {
   [key: string]: React.CSSProperties;
 }
@@ -44,8 +44,7 @@ const Payment = () => {
  
 
 
-  // to check if the cvv is valid
-
+  // Effect to validate CVV
   useEffect(() => {
     if (cvvRef.current) {
       const cvvregex = /^[0-9]{3}$/;
@@ -63,7 +62,7 @@ const Payment = () => {
     }
   }, [stepData.cvv, setValidcvv]);
 
-  // check if the card number is valid
+  // Effect to validate card number
   useEffect(() => {
     if (cardNumberRef.current) {
       const cardRegex = /^(?:\d{4}-){3}\d{4}|\d{16}$/;
@@ -81,6 +80,7 @@ const Payment = () => {
     }
   }, [stepData.cardNumber, setValidcarddigit]);
 
+   // Function to handle input field changes
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement>,
     field: string

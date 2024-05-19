@@ -49,17 +49,17 @@ function App() {
   };
 
   // console.log(stepData)
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-     setLoading(true)
 
     if (!expiryDate || !validcvv || !validcarddigit) {
       // Display error toast if required fields are not filled
       toast.error("Please fill all the Required fields");
       return;
     }
+    setLoading(true)
 
-  // for locally http://localhost:3000/api/v1/users/createUser
+  const loader=toast.loading("Submitting...")
 
     try {
       const response = await axios.post("https://stepper-3f76.onrender.com/api/v1/users/createUser", {
@@ -75,14 +75,12 @@ function App() {
       });
     
        await response.data;
-
-      
-
-  const loader=toast.loading("Submitting...")
-     
+      // console.log(data);
     
       if (response.status === 201) {
         // User created successfully
+      
+       
         toast.success("User created successfully");
         setCurrStep(Currstep + 1);
       }
@@ -98,12 +96,10 @@ function App() {
       } else {
         console.error("Unknown error:", error);
       }
-    }
-    finally{
+    }finally{
       setLoading(false)
       toast.dismiss(loader)
     }
-
 
     // // showThankYou(true);
   };

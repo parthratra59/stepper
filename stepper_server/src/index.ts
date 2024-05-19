@@ -22,9 +22,10 @@ app.use(express.json({
 // Define CORS options to restrict access to a specific origin and allow certain methods and headers
 
 // for locally -> origin: http://localhost:5173
+// Credentials are false because no authentication is taking place.
 const corsOptions = {
   origin: "https://paymentstepper.netlify.app",
-  credentials: true,
+  credentials: false,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   allowedHeaders: "Content-Type,Authorization"
 };

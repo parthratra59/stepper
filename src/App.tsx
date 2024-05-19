@@ -22,6 +22,8 @@ function App() {
     expiryDate,
   } = useContext(stepContext);
 
+  const [loading,setLoading] = useState(false)
+
   // Function to show the appropriate component based on the current step
   const showComponent = (step: number) => {
     switch (step) {
@@ -49,6 +51,7 @@ function App() {
   // console.log(stepData)
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+     setLoading(true)
 
     if (!expiryDate || !validcvv || !validcarddigit) {
       // Display error toast if required fields are not filled
@@ -72,6 +75,10 @@ function App() {
       });
     
        await response.data;
+
+      
+
+  const loader=toast.loading("Submitting...")
      
     
       if (response.status === 201) {
@@ -92,6 +99,11 @@ function App() {
         console.error("Unknown error:", error);
       }
     }
+    finally{
+      setLoading(false)
+      toast.dismiss(loader)
+    }
+
 
     // // showThankYou(true);
   };
@@ -114,13 +126,14 @@ function App() {
                 padding: "10px 30px",
               }}
               onClick={() => setCurrStep(Currstep - 1)}
+              disabled={loading}
             >
               Back
             </button>
           )}
           {Currstep === 2 && (
             <form onSubmit={handleSubmit}>
-              <button className="button" type="submit">
+              <button className="button" type="submit" disabled={loading}>
                 Submit
               </button>
             </form>
@@ -129,7 +142,7 @@ function App() {
 
         <div className="flex items-center justify-center">
           {Currstep < 2 && (
-            <button className="button" onClick={handleNext}>
+            <button className="button" onClick={handleNext} disabled={loading}>
               Next
             </button>
           )}
@@ -140,3 +153,4 @@ function App() {
 }
 
 export default App;
+
